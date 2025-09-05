@@ -70,10 +70,10 @@ function LoginForm(){
 const today = new Date();
 
 function formatDate(date) {
-  return new Intl.DateTimeFormat(
+  return Intl.DateTimeFormat(
     'zh-CN',
-    { weekday: 'long' }
-  ).format(date);
+    {weekday: 'long'}
+  ).format(date)
 }
 
 export function TodoList() {
@@ -81,8 +81,6 @@ export function TodoList() {
     <h1>To Do List for {formatDate(today)}</h1>
   );
 }
-
-
 
 export default function MyApp() {
   let content;
